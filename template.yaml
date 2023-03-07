@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  php-event-drive-function
+
+Transform:
+  - AWS::Serverless-2016-10-31
+
+Resources:
+  LambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: hello-world-function
+      Runtime: provided.al2
+      Layers:
+        - arn:aws:lambda:us-east-1:209497400698:layer:php-81:43
+      Architectures:
+        - x86_64
+      CodeUri: source
+      Handler: index.php
+      MemorySize: 128
+      Timeout: 100
