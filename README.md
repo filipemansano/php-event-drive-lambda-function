@@ -24,7 +24,7 @@ composer install
 sam deploy --guided
 ```
 
-Este comando iniciará um assistente que o guiará através do processo de implantação. Você precisará fornecer um nome para sua pilha CloudFormation, escolher a região da AWS onde deseja implantar a função Lambda e outras configurações relevantes.  Quando a implantação for concluída, o SAM CLI exibirá a URL da API Gateway que você pode usar para acionar sua função.
+Este comando iniciará um assistente que o guiará através do processo de implantação. Você precisará fornecer um nome para sua pilha CloudFormation, escolher a região da AWS onde deseja implantar a função Lambda e outras configurações relevantes.  Quando a implantação for concluída, você poderá acessar sua função normalmente atráves do console da AWS, ou caso queira pode criar um evento HTTP para aciona-la via URL.
 
 4. Quando a implantação estiver concluída, você pode testar a função Lambda acessando a URL da API Gateway exibida na saída do SAM CLI. Você deve ver a mensagem "HelloWorld" sendo exibida.
 
