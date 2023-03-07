@@ -33,4 +33,4 @@ Este comando iniciará um assistente que o guiará através do processo de impla
 * `source/index.php`: Este arquivo contém o código que será executado quando a função Lambda for acionada.
 
 ## Créditos
-O exemplo neste repositório foi criado com base no [Quick Start](https://bref.sh/docs/quickstart.html) do Bref.sh e na documentação do SAM CLI. Se você tiver dúvidas ou encontrar problemas ao usar este exemplo, sinta-se à vontade para abrir uma [issue](https://github.com/filipemansano/php-event-driven-lambda-function/issues) neste repositório.
+O exemplo neste repositório foi criado com base no [Quick Start](https://bref.sh/docs/runtimes/function.html) do Bref.sh e na documentação do SAM CLI. Se você tiver dúvidas ou encontrar problemas ao usar este exemplo, sinta-se à vontade para abrir uma [issue](https://github.com/filipemansano/php-event-driven-lambda-function/issues) neste repositório.
