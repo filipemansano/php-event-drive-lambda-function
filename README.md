@@ -21,12 +21,17 @@ composer install
 3. Execute o seguinte comando (no diretório raiz) para implantar a função Lambda usando o SAM CLI:
 
 ```bash
-sam deploy --guided
+sam build && sam deploy --guided
 ```
 
 Este comando iniciará um assistente que o guiará através do processo de implantação. Você precisará fornecer um nome para sua pilha CloudFormation, escolher a região da AWS onde deseja implantar a função Lambda e outras configurações relevantes.  Quando a implantação for concluída, você poderá acessar sua função normalmente atráves do console da AWS, ou caso queira pode criar um evento HTTP para aciona-la via URL.
 
 4. Quando a implantação estiver concluída, você pode testar a função Lambda acessando o console da AWS navegando até sua função acesse a aba Test. Você deve ver a mensagem "HelloWorld" sendo exibida.
+
+5. Nas implantações subsequentes basta utilizar o seguinte comando
+```bash
+sam build && sam deploy
+```
 
 ## Arquivos importantes
 * `template.yaml`: Este arquivo contém a definição da função Lambda e suas dependências usando o SAM.

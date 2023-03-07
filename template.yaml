@@ -6,6 +6,20 @@ Transform:
   - AWS::Serverless-2016-10-31
 
 Resources:
+
+  ComposerDependenciesLayers:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: !Sub "composer-dependencies-${AWS::StackName}"
+      Description: !Sub "composer dependencies from stack ${AWS::StackName}"
+      ContentUri: source
+      CompatibleRuntimes:
+        - provided.al2
+      LicenseInfo: 'MIT'
+      RetentionPolicy: Retain
+    Metadata:
+      BuildMethod: makefile
+
   LambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -13,9 +27,15 @@ Resources:
       Runtime: provided.al2
       Layers:
         - arn:aws:lambda:us-east-1:209497400698:layer:php-81:43
+        - !Ref ComposerDependenciesLayers
       Architectures:
         - x86_64
       CodeUri: source
       Handler: index.php
+      Environment:
+        Variables:
+          BREF_AUTOLOAD_PATH: '/opt/vendor/autoload.php'
       MemorySize: 128
       Timeout: 100
+    Metadata:
+      BuildMethod: makefile
