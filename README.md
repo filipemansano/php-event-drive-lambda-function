@@ -12,7 +12,7 @@ Pré-requisitos
 git clone git@github.com:filipemansano/php-event-driven-lambda-function.git
 ```
 
-2. Navegue até o diretório do projeto e execute o seguinte comando para instalar as dependências:
+2. Navegue até o diretório do projeto (pasta source) e execute o seguinte comando para instalar as dependências:
 
 ```bash
 composer install
