@@ -18,7 +18,7 @@ git clone git@github.com:filipemansano/php-event-driven-lambda-function.git
 composer install
 ```
 
-3. Execute o seguinte comando para implantar a função Lambda usando o SAM CLI:
+3. Execute o seguinte comando (no diretório raiz) para implantar a função Lambda usando o SAM CLI:
 
 ```bash
 sam deploy --guided
