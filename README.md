@@ -1,5 +1,5 @@
 # Função Lambda em PHP
-Este repositório contém um exemplo de como usar o [Bref.sh](https://bref.sh/) para criar uma função Lambda no AWS em PHP. O código usa o Serverless [Application Model (SAM)](https://aws.amazon.com/serverless/sam/) para definir e implantar a função.
+Este repositório contém um exemplo de como usar o [Bref.sh](https://bref.sh/) para criar uma função Lambda no AWS em PHP. O código usa o [Serverless Application Model (SAM)](https://aws.amazon.com/serverless/sam/) para definir e implantar a função.
 
 Pré-requisitos
 * [Composer](https://getcomposer.org/)
